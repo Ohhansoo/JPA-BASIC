@@ -11,6 +11,9 @@ public class Order {
     private Long id;
     @Column(name = "MEMBER_ID")
     private Long memberId;
+    @OneToOne
+    @JoinColumn(name = "DELIVERY_ID")
+    private Delivery delivery;
     private LocalDateTime orderDate;
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
